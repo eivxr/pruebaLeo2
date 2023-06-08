@@ -15,16 +15,8 @@ export const AppRouter = () => {
       setRoute(newRoute);
     };
   
-    let content = null;
+    let content = route === '/Input' ? <Input/> :route === '/Hangman' ? <Game/>: null;
   
-    switch (route) {
-      case '/Input':
-        content = <Input />;
-        break;
-      case '/Hangman':
-        content = <Game/>;
-        break;
-    }   
 
 
   return (
